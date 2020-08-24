@@ -1,5 +1,7 @@
 # poc-qrcode
 
+POC para testar lib de QR Code para Vue.js
+
 ## Project setup
 ```
 npm install

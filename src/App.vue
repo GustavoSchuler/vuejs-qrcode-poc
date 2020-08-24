@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h1>SMS</h1>
+      <qrcode value="SMSTO:28577:palavra-chave" :options="{ width: 200 }"></qrcode>
+    </div>
+    <div>
+      <h1>WhatsApp</h1>
+      <qrcode value="https://wa.me/551148377404?text=palavra-chave" :options="{ width: 200 }"></qrcode>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VueQrcode from '@chenfengyuan/vue-qrcode'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'qrcode': VueQrcode
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
